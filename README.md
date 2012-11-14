@@ -5,15 +5,39 @@ as its integral scripting layer. Under the hood is C/C++, however wherever possi
 
 Included in the repo is the source of Spinel, as well as a demo application for testing the engine.
 
-I want to stress that this is in *EARLY DEVELOPMENT*. What you see is the result of initial research
+I want to stress that this is in **EARLY DEVELOPMENT**. What you see is the result of initial research
 taken place during an Agora Games Hackathon in 24 hours.  Most of what you see will likely be rewritten,
 but given the requirement of having a working demo in 24 hours, some temporary structures had to be put
 in place.
 
-This project uses a .xcodeproj which contains the two build targets of the game and the engine. The game
-source is found in the game/ directory.
+## Installation
 
-## Demo
+Spinel requires compiling mruby, and comes with mruby as a git submodule linked to working builds with Spinel.
+
+```
+git clone git://github.com/cadwallion/spinel.git
+cd spinel
+git submodule init && git submodule update
+```
+
+For compilation, spinel comes with an Xcode project.  For non-Xcode users, the project is compiled via make:
+
+```
+make [game|engine|mruby|all|distclean|help]
+```
+
+To build the game, either use the 'game' target in Xcode or run `make game`. If problems occur while compiling,
+please run `make distclean` before running `make game`. Use `make help` for more information. Build output is
+set to ./build/.
+
+## Engine
+
+The Engine is a static library containing core Engine configurations and the hooks for custom game development.
+The primary components right now are Spinel::Engine and EngineSetup. Creating a game using Spinel requires
+linking `libspinel.a` and including the `engine.h` header. See the code in `src/` for more information on how
+to use Spinel in your own game.
+
+## Game Demo
 
 You'll find a demonstration of initializing an mruby VM within C++, loading source files into the VM, creation
 of Ruby objects from C and inserting them into the VM, as well as Ruby-defined function calls from C. This
