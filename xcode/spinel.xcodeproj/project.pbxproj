@@ -12,6 +12,11 @@
 		3E2447451652A3E500D2A79C /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2447431652A3E500D2A79C /* engine.cpp */; };
 		3E2447461652A3E500D2A79C /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2447441652A3E500D2A79C /* engine.h */; };
 		3E2447521652A41600D2A79C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E24474F1652A41600D2A79C /* main.cpp */; };
+		3E2447881653171300D2A79C /* game.rb in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E2447391652A3B900D2A79C /* game.rb */; };
+		3E2447891653171300D2A79C /* input_handler.rb in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E24473A1652A3B900D2A79C /* input_handler.rb */; };
+		3E24478A1653171300D2A79C /* renderer.rb in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E24473B1652A3B900D2A79C /* renderer.rb */; };
+		3E24478B1653171300D2A79C /* state_manager.rb in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E24473C1652A3B900D2A79C /* state_manager.rb */; };
+		3E24478D1653173B00D2A79C /* game.rb in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E2447511652A41600D2A79C /* game.rb */; };
 		3E493B81164D8CCF006BAC51 /* libspinel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E493AFD164D45E4006BAC51 /* libspinel.a */; };
 /* End PBXBuildFile section */
 
@@ -26,14 +31,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3E493B73164D8C23006BAC51 /* CopyFiles */ = {
+		3E24478C1653172C00D2A79C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = scripts;
+			dstSubfolderSpec = 16;
 			files = (
+				3E24478D1653173B00D2A79C /* game.rb in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E493B73164D8C23006BAC51 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = core;
+			dstSubfolderSpec = 16;
+			files = (
+				3E2447881653171300D2A79C /* game.rb in CopyFiles */,
+				3E2447891653171300D2A79C /* input_handler.rb in CopyFiles */,
+				3E24478A1653171300D2A79C /* renderer.rb in CopyFiles */,
+				3E24478B1653171300D2A79C /* state_manager.rb in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -176,6 +195,7 @@
 				3E493B71164D8C23006BAC51 /* Sources */,
 				3E493B72164D8C23006BAC51 /* Frameworks */,
 				3E493B73164D8C23006BAC51 /* CopyFiles */,
+				3E24478C1653172C00D2A79C /* CopyFiles */,
 			);
 			buildRules = (
 			);

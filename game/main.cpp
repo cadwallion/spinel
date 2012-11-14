@@ -19,8 +19,8 @@ int main(int argc, const char * argv[])
 {
   EngineSetup setup;
   setup.name = "Cad's Game";
-  setup.script_directory = "/code/spinel/game/scripts//";
-  setup.core_directory = "/code/spinel/core//";
+  setup.script_directory = "scripts/";
+  setup.core_directory = "core/";
   setup.game_class = "MyGame_Game";
   Spinel::Engine *engine = new Spinel::Engine(&setup);
   std::cout << "Loading Engine...\n";

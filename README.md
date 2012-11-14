@@ -19,9 +19,8 @@ You'll find a demonstration of initializing an mruby VM within C++, loading sour
 of Ruby objects from C and inserting them into the VM, as well as Ruby-defined function calls from C. This
 shows the capability of interoperability and the ability to maintain C/C++-level game constructs with Ruby-level
 abstractions, as well as core class loading from both sides of the VM barrier. Note that script loading uses two
-setup values in game/main.cpp: `script_diectory` and `core_directory`.  These are currently absolute paths, and
-you will need to change them if you wish to run the demo. They reflect the repo locations of `./game/scripts/`
-and `./core/`.
+setup values in game/main.cpp: `script_diectory` and `core_directory`.  These are relative paths to the build path,
+and the files will be copied to the build directory.
 
 ## Next Steps
 
