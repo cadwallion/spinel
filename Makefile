@@ -24,3 +24,6 @@ mruby:
 clean :
 	-$(RM_F) $(TARGET) $(OBJECT)
 	-$(RM_F) $(OBJECT:.o=.d)
+
+distclean : clean
+	$(MAKE) -C vendor/mruby clean
