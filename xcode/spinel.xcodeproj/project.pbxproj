@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E2447361652A39400D2A79C /* libmruby_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2447341652A39400D2A79C /* libmruby_core.a */; };
-		3E2447371652A39400D2A79C /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2447351652A39400D2A79C /* libmruby.a */; };
 		3E2447451652A3E500D2A79C /* engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2447431652A3E500D2A79C /* engine.cpp */; };
 		3E2447461652A3E500D2A79C /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2447441652A3E500D2A79C /* engine.h */; };
 		3E2447521652A41600D2A79C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E24474F1652A41600D2A79C /* main.cpp */; };
@@ -17,10 +15,19 @@
 		3E24478A1653171300D2A79C /* renderer.rb in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E24473B1652A3B900D2A79C /* renderer.rb */; };
 		3E24478B1653171300D2A79C /* state_manager.rb in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E24473C1652A3B900D2A79C /* state_manager.rb */; };
 		3E24478D1653173B00D2A79C /* game.rb in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E2447511652A41600D2A79C /* game.rb */; };
+		3E3154A816547E210024B2FB /* libmruby_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3154A616547E210024B2FB /* libmruby_core.a */; };
+		3E3154A916547E210024B2FB /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3154A716547E210024B2FB /* libmruby.a */; };
 		3E493B81164D8CCF006BAC51 /* libspinel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E493AFD164D45E4006BAC51 /* libspinel.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3E3154AE16547EDE0024B2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E493AF4164D45E4006BAC51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E3154AA16547E410024B2FB;
+			remoteInfo = build_mruby;
+		};
 		3E493B7F164D8C3F006BAC51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3E493AF4164D45E4006BAC51 /* Project object */;
@@ -57,8 +64,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3E2447341652A39400D2A79C /* libmruby_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby_core.a; path = ../lib/libmruby_core.a; sourceTree = "<group>"; };
-		3E2447351652A39400D2A79C /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby.a; path = ../lib/libmruby.a; sourceTree = "<group>"; };
 		3E2447391652A3B900D2A79C /* game.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = game.rb; sourceTree = "<group>"; };
 		3E24473A1652A3B900D2A79C /* input_handler.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = input_handler.rb; sourceTree = "<group>"; };
 		3E24473B1652A3B900D2A79C /* renderer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = renderer.rb; sourceTree = "<group>"; };
@@ -68,6 +73,8 @@
 		3E24474E1652A41600D2A79C /* game.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = game.1; sourceTree = "<group>"; };
 		3E24474F1652A41600D2A79C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3E2447511652A41600D2A79C /* game.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = game.rb; sourceTree = "<group>"; };
+		3E3154A616547E210024B2FB /* libmruby_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby_core.a; path = ../vendor/mruby/lib/libmruby_core.a; sourceTree = "<group>"; };
+		3E3154A716547E210024B2FB /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby.a; path = ../vendor/mruby/lib/libmruby.a; sourceTree = "<group>"; };
 		3E493AFD164D45E4006BAC51 /* libspinel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libspinel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E493B75164D8C23006BAC51 /* game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = game; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,8 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E2447361652A39400D2A79C /* libmruby_core.a in Frameworks */,
-				3E2447371652A39400D2A79C /* libmruby.a in Frameworks */,
+				3E3154A816547E210024B2FB /* libmruby_core.a in Frameworks */,
+				3E3154A916547E210024B2FB /* libmruby.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,10 +144,10 @@
 		3E493AF2164D45E4006BAC51 = {
 			isa = PBXGroup;
 			children = (
+				3E3154A616547E210024B2FB /* libmruby_core.a */,
+				3E3154A716547E210024B2FB /* libmruby.a */,
 				3E2447381652A3B900D2A79C /* core */,
 				3E2447421652A3E500D2A79C /* src */,
-				3E2447341652A39400D2A79C /* libmruby_core.a */,
-				3E2447351652A39400D2A79C /* libmruby.a */,
 				3E493AFE164D45E4006BAC51 /* Products */,
 				3E24474D1652A41600D2A79C /* game */,
 			);
@@ -170,6 +177,23 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		3E3154AA16547E410024B2FB /* build_mruby */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 3E3154AB16547E410024B2FB /* Build configuration list for PBXLegacyTarget "build_mruby" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "$(SRCROOT)/../vendor/mruby";
+			dependencies = (
+			);
+			name = build_mruby;
+			passBuildSettingsInEnvironment = 1;
+			productName = build_mruby;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		3E493AFC164D45E4006BAC51 /* spinel */ = {
 			isa = PBXNativeTarget;
@@ -182,6 +206,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3E3154AF16547EDE0024B2FB /* PBXTargetDependency */,
 			);
 			name = spinel;
 			productName = spinel;
@@ -230,6 +255,7 @@
 			targets = (
 				3E493AFC164D45E4006BAC51 /* spinel */,
 				3E493B74164D8C23006BAC51 /* game */,
+				3E3154AA16547E410024B2FB /* build_mruby */,
 			);
 		};
 /* End PBXProject section */
@@ -254,6 +280,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3E3154AF16547EDE0024B2FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E3154AA16547E410024B2FB /* build_mruby */;
+			targetProxy = 3E3154AE16547EDE0024B2FB /* PBXContainerItemProxy */;
+		};
 		3E493B80164D8C3F006BAC51 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3E493AFC164D45E4006BAC51 /* spinel */;
@@ -262,6 +293,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3E3154AC16547E410024B2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3E3154AD16547E410024B2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3E493AFF164D45E4006BAC51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -316,50 +368,68 @@
 		3E493B02164D45E4006BAC51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				EXECUTABLE_PREFIX = lib;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../include\"";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../lib\"",
+					"\"$(SRCROOT)/../vendor/mruby/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "$(SRCROOT)/../build";
 			};
 			name = Debug;
 		};
 		3E493B03164D45E4006BAC51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				EXECUTABLE_PREFIX = lib;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../include\"";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../lib\"",
+					"\"$(SRCROOT)/../vendor/mruby/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "$(SRCROOT)/../build";
 			};
 			name = Release;
 		};
 		3E493B7D164D8C23006BAC51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../include\"";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../lib\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../build\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "$(SRCROOT)/../build";
 			};
 			name = Debug;
 		};
 		3E493B7E164D8C23006BAC51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../include\"";
-				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../lib\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../build\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "$(SRCROOT)/../build";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3E3154AB16547E410024B2FB /* Build configuration list for PBXLegacyTarget "build_mruby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E3154AC16547E410024B2FB /* Debug */,
+				3E3154AD16547E410024B2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3E493AF7164D45E4006BAC51 /* Build configuration list for PBXProject "spinel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
