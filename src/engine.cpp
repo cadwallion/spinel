@@ -29,9 +29,7 @@ namespace Spinel {
     load_game_object();
     for (int x = 0; x < 5; x++) {
       std::cout << "C++ RUN ITERATION #" << x << std::endl;
-      mrb_load_string_cxt(mrb, "GAME_OBJ.update", mrb_context);
-      // if you want to call from C instead of evaluating a ruby string, uncomment below
-      //mrb_funcall(mrb, game_object, "update", 0);
+      mrb_funcall(mrb, game_object, "update", 0);
       sleep(1);
     }
   }
