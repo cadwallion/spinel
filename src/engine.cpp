@@ -63,6 +63,14 @@ namespace Spinel {
       while ((ent = readdir(dir)) != NULL) {
         if (strstr(ent->d_name, ".rb")) {
           load_mrb_file(directory, ent->d_name);
+        } else if (ent->d_type == DT_DIR) {
+          if (strcmp(ent->d_name, ".") != 0 && strcmp(ent->d_name, "..") != 0) {
+            std::string path;
+            path += directory;
+            path += ent->d_name;
+            path += "/";
+            load_mrb_files_from_dir(path.c_str());
+          }
         }
       }
     }
