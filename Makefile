@@ -20,7 +20,7 @@ game: engine
 	$(MAKE) -C game
 
 $(BUILD_DIR)/libspinel.a : mruby $(OBJECT)
-	$(AR) r $@ $(OBJECT) $(BASEDIR)/vendor/mruby/src/*.o $(BASEDIR)/vendor/mruby/mrblib/*.o
+	$(AR) r $@ $(OBJECT) $(shell find $(BASEDIR)/vendor/mruby/build/host -type f -name '*.o')
 
 $(OBJECT) : %.o : %.cpp
 	$(CC) $(ALL_CFLAGS) $(INCLUDES) -c $< -o $@
